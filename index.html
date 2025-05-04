@@ -1,12 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dancing Line Landing Page</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a basic HTML page.</p>
+  <div class="container">
+    <h1>Let's Dance!</h1>
+
+    <!-- SVG Line Drawing -->
+    <svg class="line-art" viewBox="0 0 300 200">
+      <path d="M10 150 Q 150 10 290 150" stroke="#fff" fill="transparent" stroke-width="3"/>
+    </svg>
+
+    <!-- Dancing Stick Figure -->
+    <div class="dancer">
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="arms"></div>
+      <div class="legs"></div>
+    </div>
+  </div>
 </body>
 </html>
