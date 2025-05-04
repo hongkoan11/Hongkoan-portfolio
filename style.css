@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  background: #111;
+  color: #fff;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+
+/* SVG Drawing Line Animation */
+.line-art path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: draw 3s ease-in-out forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Stick Figure Dancer */
+.dancer {
+  position: relative;
+  width: 50px;
+  height: 120px;
+  margin: 40px auto 0;
+  animation: dance 1s infinite alternate ease-in-out;
+}
+
+.dancer .head {
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 15px;
+}
+
+.dancer .body {
+  width: 4px;
+  height: 40px;
+  background: white;
+  position: absolute;
+  top: 20px;
+  left: 23px;
+}
+
+.dancer .arms {
+  width: 40px;
+  height: 4px;
+  background: white;
+  position: absolute;
+  top: 30px;
+  left: 5px;
+}
+
+.dancer .legs {
+  width: 4px;
+  height: 40px;
+  background: white;
+  position: absolute;
+  top: 60px;
+  left: 23px;
+}
+
+.dancer .legs::before,
+.dancer .legs::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 40px;
+  background: white;
+}
+
+.dancer .legs::before {
+  transform: rotate(-30deg);
+  left: -10px;
+  top: 0;
+}
+
+.dancer .legs::after {
+  transform: rotate(30deg);
+  left: 10px;
+  top: 0;
+}
+
+/* Dancing animation */
+@keyframes dance {
+  0% { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(-10px) rotate(5deg); }
+}
